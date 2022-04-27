@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card-table">
+    <div class="cart-product">
+      <table class="table table-responsive">
+        <thead>
+          <tr>
+            <th>Product Image</th>
+            <th>id</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>price</th>
+             <th>quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products; let i = index">
+            <td>  <img style="width: 120px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbMYa_vo2Eo9VLITpCbSz6CK-nbJWVMXofPw&usqp=CAU" spl class="image" /></td>
+            <td>{{ i + 1 }}</td>
+            <td>{{ product.name }}</td>
+
+            <td style="width: 25%">{{ product.description }}</td>
+            
+            <td style="width: 12%">{{ product.price }}</td>
+            <td>{{product.quantity}}</td>
+            <td><button routerLink="/checkout" mat-raised-button color="primary">Checkout</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
